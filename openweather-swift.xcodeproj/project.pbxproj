@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9C3389891D3F91B900145B79 /* openweather-swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3389881D3F91B900145B79 /* openweather-swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C3389901D3F91B900145B79 /* openweather-swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3389851D3F91B900145B79 /* openweather-swift.framework */; };
+		9C3389901D3F91B900145B79 /* OpenWeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3389851D3F91B900145B79 /* OpenWeatherKit.framework */; };
 		9C3389951D3F91B900145B79 /* openweather_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3389941D3F91B900145B79 /* openweather_swiftTests.swift */; };
+		9C3389A91D3F91FC00145B79 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3389A81D3F91FC00145B79 /* WeatherApi.swift */; };
+		9CEBB7BA1D3F983400B2CB12 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEBB7B91D3F983400B2CB12 /* WeatherResult.swift */; };
+		9CEBB7BC1D3F9D7200B2CB12 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEBB7BB1D3F9D7200B2CB12 /* Wind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C3389851D3F91B900145B79 /* openweather-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "openweather-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3389851D3F91B900145B79 /* OpenWeatherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenWeatherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3389881D3F91B900145B79 /* openweather-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "openweather-swift.h"; sourceTree = "<group>"; };
 		9C33898A1D3F91B900145B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C33898F1D3F91B900145B79 /* openweather-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "openweather-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3389941D3F91B900145B79 /* openweather_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openweather_swiftTests.swift; sourceTree = "<group>"; };
 		9C3389961D3F91B900145B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3389A81D3F91FC00145B79 /* WeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
+		9CEBB7B91D3F983400B2CB12 /* WeatherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
+		9CEBB7BB1D3F9D7200B2CB12 /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3389901D3F91B900145B79 /* openweather-swift.framework in Frameworks */,
+				9C3389901D3F91B900145B79 /* OpenWeatherKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +68,7 @@
 		9C3389861D3F91B900145B79 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C3389851D3F91B900145B79 /* openweather-swift.framework */,
+				9C3389851D3F91B900145B79 /* OpenWeatherKit.framework */,
 				9C33898F1D3F91B900145B79 /* openweather-swiftTests.xctest */,
 			);
 			name = Products;
@@ -71,8 +77,11 @@
 		9C3389871D3F91B900145B79 /* openweather-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9C3389A81D3F91FC00145B79 /* WeatherApi.swift */,
 				9C3389881D3F91B900145B79 /* openweather-swift.h */,
 				9C33898A1D3F91B900145B79 /* Info.plist */,
+				9CEBB7B91D3F983400B2CB12 /* WeatherResult.swift */,
+				9CEBB7BB1D3F9D7200B2CB12 /* Wind.swift */,
 			);
 			path = "openweather-swift";
 			sourceTree = "<group>";
@@ -115,7 +124,7 @@
 			);
 			name = "openweather-swift";
 			productName = "openweather-swift";
-			productReference = 9C3389851D3F91B900145B79 /* openweather-swift.framework */;
+			productReference = 9C3389851D3F91B900145B79 /* OpenWeatherKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9C33898E1D3F91B900145B79 /* openweather-swiftTests */ = {
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					9C3389841D3F91B900145B79 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = G97URPCGB8;
 					};
 					9C33898E1D3F91B900145B79 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3389A91D3F91FC00145B79 /* WeatherApi.swift in Sources */,
+				9CEBB7BA1D3F983400B2CB12 /* WeatherResult.swift in Sources */,
+				9CEBB7BC1D3F9D7200B2CB12 /* Wind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +323,7 @@
 		9C33899A1D3F91B900145B79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,7 +332,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.district-web.openweather-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenWeatherKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -326,6 +340,7 @@
 		9C33899B1D3F91B900145B79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -334,7 +349,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.district-web.openweather-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenWeatherKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -378,6 +393,7 @@
 				9C33899B1D3F91B900145B79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C33899C1D3F91B900145B79 /* Build configuration list for PBXNativeTarget "openweather-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +402,7 @@
 				9C33899E1D3F91B900145B79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
