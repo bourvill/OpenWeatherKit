@@ -73,8 +73,31 @@ public class WeatherApi {
         }
     }
     
+    public func currentWeather(city: String, callback: (WeatherResult?) -> ()) {
+        send("weather", param:"q=\(city)") { result in
+            guard let data = result.data() else {
+                callback(nil)
+                return
+            }
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
+        }
+    }
+    
     public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
         send("forecast", param:"lat=\(latitude)&lon=\(longitude)") { result in
+            switch result {
+            case .Success:
+                callback(ForecastResult(data: result.data()!))
+                break;
+            case .Error:
+                callback(nil)
+                break;
+            }
+        }
+    }
+    
+    public func dailyForecast(city:String, callback: (ForecastResult?) -> ()) {
+        send("forecast", param:"q=\(city)") { result in
             switch result {
             case .Success:
                 callback(ForecastResult(data: result.data()!))
