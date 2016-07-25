@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Weather {
+public class WeatherApi {
     
     public enum Result {
         case Success(NSURLResponse!, NSDictionary!)
@@ -59,7 +59,7 @@ public class Weather {
                 callback(nil)
                 return
             }
-            callback(WeatherResult(main: data["main"] as! NSDictionary))
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
         }
     }
     
@@ -69,16 +69,25 @@ public class Weather {
                 callback(nil)
                 return
             }
-            callback(WeatherResult(main: data["main"] as! NSDictionary))
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
         }
     }
     
-    public func dailyForecast(latitude:String, longitude:String, callback: (Result) -> ()) {
-        send("forecast/daily", param:"lat=\(latitude)&lon=\(longitude)", callback: callback) 
+    public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
+        send("forecast", param:"lat=\(latitude)&lon=\(longitude)") { result in
+            switch result {
+            case .Success:
+                callback(ForecastResult(data: result.data()!))
+                break;
+            case .Error:
+                callback(nil)
+                break;
+            }
+        }
     }
     
     public func dailyForecast(cityId: Int, callback: (Result) -> ()) {
-       // send("/forecast/daily?id=\(cityId)", callback: callback)
+        // send("/forecast/daily?id=\(cityId)", callback: callback)
     }
     
     private func send(endpoint:String, param:String, callback: (Result) -> ())

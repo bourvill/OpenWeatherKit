@@ -10,6 +10,7 @@ import UIKit
 
 public struct WeatherResult {
     
+    public let city:City
     public let temp:Float?
     public let pressure:Int?
     public let humidity:Int?
@@ -18,7 +19,8 @@ public struct WeatherResult {
     public let sea_level:Float?
     public let grnd_level:Float?
     
-    init(main:NSDictionary) {
+    init(city:City, main:NSDictionary) {
+        self.city = city
         temp = main["temp"] as? Float
         pressure = main["pressure"] as? Int
         humidity = main["humidity"] as? Int
