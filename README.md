@@ -1,5 +1,7 @@
 ## Readme
 
+[![Build Status](https://travis-ci.org/bourvill/OpenWeatherKit.svg?branch=master)](https://travis-ci.org/bourvill/OpenWeatherKit)
+
 Largely inspired by https://github.com/bfolder/Sweather
 
 I decided to create a fork to provide a standardization of data from the API
