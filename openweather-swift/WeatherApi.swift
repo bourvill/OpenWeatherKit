@@ -117,7 +117,7 @@ public class WeatherApi {
     {
         let currentQueue = NSOperationQueue.currentQueue()
         
-        let urlString:String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + apiKey + "&lang=fr&units=metric&" + param
+        let urlString:String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + apiKey + "&lang=fr&units=metric&" + param.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let url:NSURL = NSURL(string: urlString)!
         let request:NSURLRequest = NSURLRequest(URL: url)
         
