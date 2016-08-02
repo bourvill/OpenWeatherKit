@@ -85,15 +85,10 @@
 		9C3389871D3F91B900145B79 /* openweather-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9C6687671D5140830012D819 /* Result */,
 				9C3389A81D3F91FC00145B79 /* WeatherApi.swift */,
 				9C3389881D3F91B900145B79 /* openweather-swift.h */,
 				9C33898A1D3F91B900145B79 /* Info.plist */,
-				9CEBB7B91D3F983400B2CB12 /* WeatherResult.swift */,
-				9CEBB7BB1D3F9D7200B2CB12 /* Wind.swift */,
-				9C7E4BA71D40E2CF00BF0574 /* City.swift */,
-				9C7E4BA91D40E36700BF0574 /* Result.swift */,
-				9C7E4BAB1D40E89200BF0574 /* ForecastResult.swift */,
-				9C7E4BAD1D40EA3800BF0574 /* Weather.swift */,
 			);
 			path = "openweather-swift";
 			sourceTree = "<group>";
@@ -105,6 +100,19 @@
 				9C3389961D3F91B900145B79 /* Info.plist */,
 			);
 			path = "openweather-swiftTests";
+			sourceTree = "<group>";
+		};
+		9C6687671D5140830012D819 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				9CEBB7B91D3F983400B2CB12 /* WeatherResult.swift */,
+				9CEBB7BB1D3F9D7200B2CB12 /* Wind.swift */,
+				9C7E4BA71D40E2CF00BF0574 /* City.swift */,
+				9C7E4BA91D40E36700BF0574 /* Result.swift */,
+				9C7E4BAB1D40E89200BF0574 /* ForecastResult.swift */,
+				9C7E4BAD1D40EA3800BF0574 /* Weather.swift */,
+			);
+			name = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

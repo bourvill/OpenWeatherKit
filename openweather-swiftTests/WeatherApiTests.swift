@@ -12,15 +12,14 @@ import XCTest
 
 class WeatherApiTests: XCTestCase {
     
-    var client:WeatherApi!
-    
     override func setUp() {
         super.setUp()
-        client = WeatherApi(apiKey: "ea42045886608526507915df6b33b290")
+        WeatherApi.setApplication(apiKey: "ea42045886608526507915df6b33b290")
     }
     
     func testInit() {
-        XCTAssertEqual(client.apiKey, "ea42045886608526507915df6b33b290")
+        XCTAssertEqual(WeatherApi.Const.basePath, "http://api.openweathermap.org/data/")
+        XCTAssertEqual(WeatherApi.Const.apiVersion, "2.5")
+        XCTAssertEqual(WeatherApi.apiKey, "ea42045886608526507915df6b33b290")
     }
-    
 }

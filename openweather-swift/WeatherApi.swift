@@ -42,18 +42,18 @@ public class WeatherApi {
         }
     }
     
-    private struct Const {
+    public struct Const {
         static let basePath = "http://api.openweathermap.org/data/"
         static let apiVersion = "2.5"
     }
     
-    public let apiKey:String
+    static var apiKey:String?
     
-    public init(apiKey:String) {
+    public class func setApplication(apiKey apiKey: String) {
         self.apiKey = apiKey
     }
     
-    public func currentWeather(latitude:String, longitude:String, callback: (WeatherResult?) -> ()) {
+    static public func currentWeather(latitude:String, longitude:String, callback: (WeatherResult?) -> ()) {
         send("weather", param:"lat=\(latitude)&lon=\(longitude)") { result in
             guard let data = result.data() else {
                 callback(nil)
@@ -63,7 +63,7 @@ public class WeatherApi {
         }
     }
     
-    public func currentWeather(cityId: Int, callback: (WeatherResult?) -> ()) {
+    static public func currentWeather(cityId: Int, callback: (WeatherResult?) -> ()) {
         send("weather", param:"id=\(cityId)") { result in
             guard let data = result.data() else {
                 callback(nil)
@@ -73,7 +73,7 @@ public class WeatherApi {
         }
     }
     
-    public func currentWeather(city: String, callback: (WeatherResult?) -> ()) {
+    static public func currentWeather(city: String, callback: (WeatherResult?) -> ()) {
         send("weather", param:"q=\(city)") { result in
             guard let data = result.data() else {
                 callback(nil)
@@ -83,7 +83,7 @@ public class WeatherApi {
         }
     }
     
-    public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
+    static public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
         send("forecast", param:"lat=\(latitude)&lon=\(longitude)") { result in
             switch result {
             case .Success:
@@ -96,7 +96,7 @@ public class WeatherApi {
         }
     }
     
-    public func dailyForecast(city:String, callback: (ForecastResult?) -> ()) {
+    static public func dailyForecast(city:String, callback: (ForecastResult?) -> ()) {
         send("forecast", param:"q=\(city)") { result in
             switch result {
             case .Success:
@@ -113,12 +113,16 @@ public class WeatherApi {
         // send("/forecast/daily?id=\(cityId)", callback: callback)
     }
     
-    private func send(endpoint:String, param:String, callback: (Result) -> ())
+    static func send(endpoint:String, param:String, callback: (Result) -> ())
     {
-        let currentQueue = NSOperationQueue.currentQueue()
+        assert(apiKey != nil, "Error, you must define apiKey")
         
-        let urlString:String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + apiKey + "&lang=fr&units=metric&" + param.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        let currentQueue = NSOperationQueue.currentQueue()!
+        
+        let urlString:String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + self.apiKey! + "&lang=fr&units=metric&" + param.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        
         let url:NSURL = NSURL(string: urlString)!
+        
         let request:NSURLRequest = NSURLRequest(URL: url)
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
@@ -131,7 +135,7 @@ public class WeatherApi {
                     error = e
                 }
                 
-                currentQueue?.addOperationWithBlock {
+                currentQueue.addOperationWithBlock {
                     var result = Result.Success(response, dictionary)
                     if error != nil {
                         result = Result.Error(response, error)
