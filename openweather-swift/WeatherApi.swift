@@ -47,7 +47,7 @@ public class WeatherApi {
         static let apiVersion = "2.5"
     }
     
-    public var apiKey:String
+    public let apiKey:String
     
     public init(apiKey:String) {
         self.apiKey = apiKey
