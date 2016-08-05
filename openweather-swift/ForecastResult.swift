@@ -9,7 +9,7 @@
 import UIKit
 
 public struct ForecastResult {
-
+    
     public let city:City
     public var list:[Int:Weather] = [:]
     
@@ -17,7 +17,7 @@ public struct ForecastResult {
         self.city = City(id: data["city"]!["id"] as! Int, name: data["city"]!["name"] as! String, coord: data["city"]!["coord"] as! NSDictionary, country: data["city"]!["country"] as! String)
         
         for weather in data["list"] as! NSArray {
-            list[weather["dt"] as! Int] = Weather(fromForecast:weather["main"] as! NSDictionary)
+            list[weather["dt"] as! Int] = Weather(main:weather["main"] as! NSDictionary, weather:weather["weather"] as! NSArray)
         }
     }
 }

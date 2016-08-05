@@ -59,7 +59,8 @@ public class WeatherApi {
                 callback(nil)
                 return
             }
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
+            
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
         }
     }
     
@@ -69,7 +70,7 @@ public class WeatherApi {
                 callback(nil)
                 return
             }
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
         }
     }
     
@@ -79,7 +80,8 @@ public class WeatherApi {
                 callback(nil)
                 return
             }
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary))
+            
+            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
         }
     }
     
