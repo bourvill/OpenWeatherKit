@@ -53,68 +53,6 @@ public class WeatherApi {
         self.apiKey = apiKey
     }
     
-    static public func currentWeather(latitude:String, longitude:String, callback: (WeatherResult?) -> ()) {
-        send("weather", param:"lat=\(latitude)&lon=\(longitude)") { result in
-            guard let data = result.data() else {
-                callback(nil)
-                return
-            }
-            
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
-        }
-    }
-    
-    static public func currentWeather(cityId: Int, callback: (WeatherResult?) -> ()) {
-        send("weather", param:"id=\(cityId)") { result in
-            guard let data = result.data() else {
-                callback(nil)
-                return
-            }
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
-        }
-    }
-    
-    static public func currentWeather(city: String, callback: (WeatherResult?) -> ()) {
-        send("weather", param:"q=\(city)") { result in
-            guard let data = result.data() else {
-                callback(nil)
-                return
-            }
-            
-            callback(WeatherResult(city:City(id: data["id"] as! Int, name: data["name"] as! String, coord: data["coord"] as! NSDictionary), main: data["main"] as! NSDictionary, weather: data["weather"] as! NSArray))
-        }
-    }
-    
-    static public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
-        send("forecast", param:"lat=\(latitude)&lon=\(longitude)") { result in
-            switch result {
-            case .Success:
-                callback(ForecastResult(data: result.data()!))
-                break;
-            case .Error:
-                callback(nil)
-                break;
-            }
-        }
-    }
-    
-    static public func dailyForecast(city:String, callback: (ForecastResult?) -> ()) {
-        send("forecast", param:"q=\(city)") { result in
-            switch result {
-            case .Success:
-                callback(ForecastResult(data: result.data()!))
-                break;
-            case .Error:
-                callback(nil)
-                break;
-            }
-        }
-    }
-    
-    public func dailyForecast(cityId: Int, callback: (Result) -> ()) {
-        // send("/forecast/daily?id=\(cityId)", callback: callback)
-    }
-    
     static func send(endpoint:String, param:String, callback: (Result) -> ())
     {
         assert(apiKey != nil, "Error, you must define apiKey")
