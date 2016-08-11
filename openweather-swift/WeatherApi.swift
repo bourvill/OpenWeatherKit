@@ -71,6 +71,10 @@ public class WeatherApi {
             if let data = data {
                 do {
                     dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
+                    //Hack : api respond String or Int...
+                    if ("\(dictionary!["cod"]!)" != "200") {
+                        throw NSError(domain: dictionary!["message"] as! String, code: 404, userInfo: [:])
+                    }
                 } catch let e as NSError {
                     error = e
                 }
