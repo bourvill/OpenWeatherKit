@@ -30,45 +30,45 @@ class WeatherApiTests: XCTestCase {
             XCTAssertEqual(result!.city.name, "Lille")
             XCTAssertEqual(result!.city.coord.coordinate.latitude,  50.63000000)
             XCTAssertEqual(result!.city.coord.coordinate.longitude,  3.07000000)
-            XCTAssertNotNil(result!.temp)
-            XCTAssertNotNil(result!.pressure)
-            XCTAssertNotNil(result!.humidity)
-            XCTAssertNotNil(result!.temp_max)
-            XCTAssertNotNil(result!.temp_min)
+            XCTAssertNotNil(result!.weather.temp)
+            XCTAssertNotNil(result!.weather.pressure)
+            XCTAssertNotNil(result!.weather.humidity)
+            XCTAssertNotNil(result!.weather.temp_max)
+            XCTAssertNotNil(result!.weather.temp_min)
             expectation.fulfill()
         }
         waitForExpectationsWithTimeout(10, handler: nil)
     }
     
     func testCurrentWeatherById() {
-        let expectation = expectationWithDescription("currentWeatherByName")
+        let expectation = expectationWithDescription("currentWeatherById")
         WeatherApi.currentWeather(6454414) { result in
             XCTAssertNotNil(result)
             XCTAssertEqual(result!.city.name, "Lille")
             XCTAssertEqual(result!.city.coord.coordinate.latitude,  50.63000000)
             XCTAssertEqual(result!.city.coord.coordinate.longitude,  3.07000000)
-            XCTAssertNotNil(result!.temp)
-            XCTAssertNotNil(result!.pressure)
-            XCTAssertNotNil(result!.humidity)
-            XCTAssertNotNil(result!.temp_max)
-            XCTAssertNotNil(result!.temp_min)
+            XCTAssertNotNil(result!.weather.temp)
+            XCTAssertNotNil(result!.weather.pressure)
+            XCTAssertNotNil(result!.weather.humidity)
+            XCTAssertNotNil(result!.weather.temp_max)
+            XCTAssertNotNil(result!.weather.temp_min)
             expectation.fulfill()
         }
         waitForExpectationsWithTimeout(10, handler: nil)
     }
     
     func testCurrentWeatherByLocation() {
-        let expectation = expectationWithDescription("currentWeatherByName")
+        let expectation = expectationWithDescription("currentWeatherByLocation")
         WeatherApi.currentWeather("50.63000000", longitude: "3.07000000") { result in
             XCTAssertNotNil(result)
             XCTAssertEqual(result!.city.name, "Lille")
             XCTAssertEqual(result!.city.coord.coordinate.latitude,  50.63000000)
             XCTAssertEqual(result!.city.coord.coordinate.longitude,  3.07000000)
-            XCTAssertNotNil(result!.temp)
-            XCTAssertNotNil(result!.pressure)
-            XCTAssertNotNil(result!.humidity)
-            XCTAssertNotNil(result!.temp_max)
-            XCTAssertNotNil(result!.temp_min)
+            XCTAssertNotNil(result!.weather.temp)
+            XCTAssertNotNil(result!.weather.pressure)
+            XCTAssertNotNil(result!.weather.humidity)
+            XCTAssertNotNil(result!.weather.temp_max)
+            XCTAssertNotNil(result!.weather.temp_min)
             expectation.fulfill()
         }
         waitForExpectationsWithTimeout(10, handler: nil)
