@@ -9,11 +9,11 @@
 import Foundation
 
 public class WeatherApi {
-    
+
     public enum Result {
         case Success(NSURLResponse!, NSDictionary!)
         case Error(NSURLResponse!, NSError!)
-        
+
         public func data() -> NSDictionary? {
             switch self {
             case .Success(_, let dictionary):
@@ -22,7 +22,7 @@ public class WeatherApi {
                 return nil
             }
         }
-        
+
         public func response() -> NSURLResponse? {
             switch self {
             case .Success(let response, _):
@@ -31,7 +31,7 @@ public class WeatherApi {
                 return response
             }
         }
-        
+
         public func error() -> NSError? {
             switch self {
             case .Success(_, _):
@@ -41,31 +41,30 @@ public class WeatherApi {
             }
         }
     }
-    
+
     public struct Const {
         static let basePath = "http://api.openweathermap.org/data/"
         static let apiVersion = "2.5"
     }
-    
-    static var apiKey:String?
-    
+
+    static var apiKey: String?
+
     public class func setApplication(apiKey apiKey: String) {
         self.apiKey = apiKey
     }
-    
-    static func send(endpoint:String, param:String, callback: (Result) -> ())
-    {
+
+    static func send(endpoint: String, param: String, callback: (Result) -> ()) {
         assert(apiKey != nil, "Error, you must define apiKey")
-        
+
         let currentQueue = NSOperationQueue.currentQueue()!
-        
-        let urlString:String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + self.apiKey! + "&lang=fr&units=metric&" + param.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
-        
-        let url:NSURL = NSURL(string: urlString)!
-        
-        let request:NSURLRequest = NSURLRequest(URL: url)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+
+        let urlString: String = Const.basePath + Const.apiVersion + "/" + endpoint + "?APPID=" + self.apiKey! + "&lang=fr&units=metric&" + param.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+
+        let url: NSURL = NSURL(string: urlString)!
+
+        let request: NSURLRequest = NSURLRequest(URL: url)
+
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             var error: NSError? = error
             var dictionary: NSDictionary?
             if let data = data {
@@ -78,7 +77,7 @@ public class WeatherApi {
                 } catch let e as NSError {
                     error = e
                 }
-                
+
                 currentQueue.addOperationWithBlock {
                     var result = Result.Success(response, dictionary)
                     if error != nil {

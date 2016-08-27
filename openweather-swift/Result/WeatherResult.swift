@@ -9,11 +9,11 @@
 import UIKit
 
 public struct WeatherResult {
-    
-    public let city:City
-    public let weather:Weather
-    
-    init(city:City, main:NSDictionary, weather:NSArray) {
+
+    public let city: City
+    public let weather: Weather
+
+    init(city: City, main: NSDictionary, weather: NSArray) {
         self.city = city
         self.weather = Weather(main: main, weather: weather)
     }

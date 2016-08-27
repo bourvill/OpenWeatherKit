@@ -9,16 +9,16 @@
 import UIKit
 
 public struct Weather {
-    
-    public let temp:Float?
-    public let pressure:Int?
-    public let humidity:Int?
-    public let temp_min:Float?
-    public let temp_max:Float?
-    public let sea_level:Float?
-    public let grnd_level:Float?
-    public let icon:Icon
-    
+
+    public let temp: Float?
+    public let pressure: Int?
+    public let humidity: Int?
+    public let temp_min: Float?
+    public let temp_max: Float?
+    public let sea_level: Float?
+    public let grnd_level: Float?
+    public let icon: Icon
+
     public enum Icon {
         case ClearSky
         case FewClouds
@@ -31,8 +31,8 @@ public struct Weather {
         case Mist
         case Undefined
     }
-    
-    public init(main:NSDictionary, weather:NSArray) {
+
+    public init(main: NSDictionary, weather: NSArray) {
         self.temp = main["temp"] as? Float
         self.pressure = main["pressure"] as? Int
         self.humidity = main["humidity"] as? Int
@@ -40,7 +40,7 @@ public struct Weather {
         self.temp_max = main["temp_max"] as? Float
         self.sea_level = main["sea_level"] as? Float
         self.grnd_level = main["grnd_level"] as? Float
-        
+
         switch (weather.firstObject as! NSDictionary)["icon"] as! String {
         case "01n", "01d":
             icon = .ClearSky

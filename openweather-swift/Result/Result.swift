@@ -9,10 +9,10 @@
 import UIKit
 
 struct ResultApi {
-    
-    let city:City
-    
-    init(city:City) {
+
+    let city: City
+
+    init(city: City) {
         self.city = city
     }
 

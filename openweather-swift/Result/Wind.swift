@@ -8,6 +8,6 @@
 
 import UIKit
 
-struct Wind{
+struct Wind {
 
 }

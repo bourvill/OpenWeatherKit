@@ -9,32 +9,32 @@
 import Foundation
 
 extension WeatherApi {
-    static public func dailyForecast(latitude:String, longitude:String, callback: (ForecastResult?) -> ()) {
-        send("forecast", param:"lat=\(latitude)&lon=\(longitude)") { result in
+    static public func dailyForecast(latitude: String, longitude: String, callback: (ForecastResult?) -> ()) {
+        send("forecast", param: "lat=\(latitude)&lon=\(longitude)") { result in
             switch result {
             case .Success:
                 callback(ForecastResult(data: result.data()!))
-                break;
+                break
             case .Error:
                 callback(nil)
-                break;
+                break
             }
         }
     }
-    
-    static public func dailyForecast(city:String, callback: (ForecastResult?) -> ()) {
-        send("forecast", param:"q=\(city)") { result in
+
+    static public func dailyForecast(city: String, callback: (ForecastResult?) -> ()) {
+        send("forecast", param: "q=\(city)") { result in
             switch result {
             case .Success:
                 callback(ForecastResult(data: result.data()!))
-                break;
+                break
             case .Error:
                 callback(nil)
-                break;
+                break
             }
         }
     }
-    
+
     public func dailyForecast(cityId: Int, callback: (Result) -> ()) {
         // send("/forecast/daily?id=\(cityId)", callback: callback)
     }
