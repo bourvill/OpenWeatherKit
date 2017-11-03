@@ -1,5 +1,0 @@
-language: objective-c
-xcode_project: openweather-swift.xcodeproj
-xcode_scheme: openweather-swift
-xcode_sdk: iphonesimulator
-osx_image: xcode7.3
