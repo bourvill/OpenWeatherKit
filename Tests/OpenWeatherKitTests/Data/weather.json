@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": 2.96,
+        "lat": 50.49
+    },
+    "weather": [
+                {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+                }
+                ],
+    "base": "stations",
+    "main": {
+        "temp": 289.61,
+        "pressure": 1021,
+        "humidity": 88,
+        "temp_min": 288.15,
+        "temp_max": 290.15
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.7,
+        "deg": 220
+    },
+    "clouds": {
+        "all": 90
+    },
+    "dt": 1508842800,
+    "sys": {
+        "type": 1,
+        "id": 5625,
+        "message": 0.0044,
+        "country": "FR",
+        "sunrise": 1508826388,
+        "sunset": 1508863034
+    },
+    "id": 3028486,
+    "name": "Carvin",
+    "cod": 200
+}
