@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Coord: Codable {
-    let lon: Double
-    let lat: Double
+public struct Coord: Codable {
+    public let lon: Double
+    public let lat: Double
 }

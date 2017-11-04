@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Main: Codable {
-    let temp: Double
-    let pressure: Double
-    let humidity: Int
-    let tempMin: Double
-    let tempMax: Double
+public struct Main: Codable {
+    public let temp: Double
+    public let pressure: Double
+    public let humidity: Int
+    public let tempMin: Double
+    public let tempMax: Double
 
     enum CodingKeys: String, CodingKey {
         case temp

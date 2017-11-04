@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct WeatherData: Codable {
-    let id: Int
-    let main: String
-    let description: String
-    let icon: String
+public struct WeatherData: Codable {
+    public let id: Int
+    public let main: String
+    public let description: String
+    public let icon: String
 }

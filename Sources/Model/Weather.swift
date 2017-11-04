@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct Weather: Codable {
-    let id: Int
-    let visibility: Int
-    let name: String
-    let coord: Coord
-    let wind: Wind
-    let base: String
-    let dt: Int
-    let weather: [WeatherData]
-    let sys: Sys
-    let clouds: Clouds
-    let main: Main
+public struct Weather: Codable {
+    public let id: Int
+    public let visibility: Int
+    public let name: String
+    public let coord: Coord
+    public let wind: Wind
+    public let base: String
+    public let dt: Int
+    public let weather: [WeatherData]
+    public let sys: Sys
+    public let clouds: Clouds
+    public let main: Main
 }

@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Forecast: Codable {
-    struct City: Codable {
-        let id: Int
-        let name: String
-        let country: String
-        let coord: Coord
+public struct Forecast: Codable {
+    public struct City: Codable {
+        public let id: Int
+        public let name: String
+        public let country: String
+        public let coord: Coord
     }
-    let city: City
-    struct List: Codable {
-        let clouds: Clouds
-        let main: Main
-        let weather: [WeatherData]
-        let wind: Wind
-    }
+    public let city: City
 
-    let list: [List]
+    public struct List: Codable {
+        public let clouds: Clouds
+        public let main: Main
+        public let weather: [WeatherData]
+        public let wind: Wind
+    }
+    public let list: [List]
 }

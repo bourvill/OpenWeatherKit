@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Clouds: Codable {
-    let all: Int
+public struct Clouds: Codable {
+    public let all: Int
 }

@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Wind: Codable {
-    let speed: Double
-    let deg: Double?
+public struct Wind: Codable {
+    public let speed: Double
+    public let deg: Double?
 
-    var degString: String {
+    public var degString: String {
         get {
             if 0 == deg || 360 == deg {
                 return "N"

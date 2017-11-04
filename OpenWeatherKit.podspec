@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "OpenWeatherKit"
-  s.version      = "0.1"
-  s.summary      = ""
+  s.version      = "2.0"
+  s.summary      = "Use easly OpenWeatherMap with simple api"
   s.description  = <<-DESC
-    Your description here.
+    OpenWeatherKit is a simple library
   DESC
   s.homepage     = "git@github.com:bourvill/OpenWeatherKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }

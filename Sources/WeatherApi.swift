@@ -8,10 +8,11 @@
 
 import Foundation
 
-enum WeatherError: Error {
+public enum WeatherError: Error {
     case invalidData
 }
-enum Result<T> {
+
+public enum Result<T> {
     case success(T)
     case error(Error?)
 }
@@ -26,30 +27,30 @@ protocol WeatherApiProtocol {
     func getEndpoint() -> String
 }
 
-protocol WeatherApiWeatherProtocol {
+public protocol WeatherApiWeatherProtocol {
     func getWeatherFor(lat: String, lon: String, completion: @escaping (Result<Weather>) -> ())
     func getWeatherFor(cityId id: Int, completion: @escaping (Result<Weather>) -> ())
 }
 
-protocol WeatherApiForecastProtocol {
+public protocol WeatherApiForecastProtocol {
     func getForecastFor(lat: String, lon: String, completion: @escaping (Result<Forecast>) -> ())
     func getForecastFor(cityId id: Int, completion: @escaping (Result<Forecast>) -> ())
 }
 
-class WeatherApi: WeatherApiProtocol {
+public class WeatherApi: WeatherApiProtocol {
     var key: String
     var endpoint: String = "https://api.openweathermap.org/data"
     var version: String = "2.5"
     var urlSession: URLSessionProtocol
     var defaultParameters: [URLQueryItem] = []
     
-    init(key: String, urlSession: URLSessionProtocol) {
+    public init(key: String, urlSession: URLSessionProtocol) {
         self.key = key
         self.urlSession = urlSession
         self.defaultParameters.append(URLQueryItem(name: "APPID", value: key))
     }
     
-    convenience init(key: String) {
+    public convenience init(key: String) {
         self.init(key: key, urlSession: URLSession.shared)
     }
     
@@ -85,19 +86,19 @@ class WeatherApi: WeatherApiProtocol {
 }
 
 extension WeatherApi: WeatherApiWeatherProtocol {
-    func getWeatherFor(lat: String, lon: String, completion: @escaping (Result<Weather>) -> ()) {
+    public func getWeatherFor(lat: String, lon: String, completion: @escaping (Result<Weather>) -> ()) {
         send(to: "weather", with: ["lat": lat, "lon": lon], completion: completion)
     }
-    func getWeatherFor(cityId id: Int, completion: @escaping (Result<Weather>) -> ()) {
+    public func getWeatherFor(cityId id: Int, completion: @escaping (Result<Weather>) -> ()) {
         send(to: "weather", with: ["id": id], completion: completion)
     }
 }
 
 extension WeatherApi: WeatherApiForecastProtocol {
-    func getForecastFor(lat: String, lon: String, completion: @escaping (Result<Forecast>) -> ()) {
+    public func getForecastFor(lat: String, lon: String, completion: @escaping (Result<Forecast>) -> ()) {
         send(to: "forecast", with: ["lat": lat, "lon": lon], completion: completion)
     }
-    func getForecastFor(cityId id: Int, completion: @escaping (Result<Forecast>) -> ()) {
+    public func getForecastFor(cityId id: Int, completion: @escaping (Result<Forecast>) -> ()) {
         send(to: "forecast", with: ["id": id], completion: completion)
     }
 }
