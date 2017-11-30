@@ -18,6 +18,7 @@ public struct Forecast: Codable {
     public let city: City
 
     public struct List: Codable {
+        public let dt: Int
         public let clouds: Clouds
         public let main: Main
         public let weather: [WeatherData]
