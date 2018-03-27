@@ -46,4 +46,9 @@ class WindTests: XCTestCase {
         let wind = Wind(speed: 0, deg: 135)
         XCTAssertEqual("SE", wind.degString)
     }
+
+    func testWind12DegreesN() {
+        let wind = Wind(speed: 0, deg: 12)
+        XCTAssertEqual("N", wind.degString)
+    }
 }

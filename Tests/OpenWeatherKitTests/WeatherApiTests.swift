@@ -51,7 +51,7 @@ class WeatherApiTests: XCTestCase {
         XCTAssertEqual("FR", secondItem.value)
     }
 
-    func testGetWeatherSuccess() {
+    func testGetWeatherForLatLonSuccess() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -79,7 +79,7 @@ class WeatherApiTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testGetWeatherErrorWithEmptydData() {
+    func testGetWeatherForLatLonErrorWithEmptydData() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -107,7 +107,7 @@ class WeatherApiTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testGetWeatherErrorWithInvalidJSON() {
+    func testGetWeatherForLatLonErrorWithInvalidJSON() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -136,7 +136,35 @@ class WeatherApiTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testGetForecastSuccess() {
+    func testGetWeatherForIdSuccess() {
+        let mockSession = MockURLSession()
+        let dataTask = Task()
+        mockSession.nextDataTask = dataTask
+
+        let path = Bundle(for: type(of: self)).path(forResource: "weather", ofType: "json")
+        mockSession.nextData = try! String(contentsOfFile: path!).data(using: .utf8)
+
+        let weatherApi = WeatherApi(key: "keytest", urlSession: mockSession)
+
+        let expect = expectation(description: "Get completion")
+        weatherApi.getWeatherFor(cityId: 3028486) { result in
+            expect.fulfill()
+
+            switch result {
+            case .success(let results):
+                XCTAssertEqual(3028486, results.id)
+                XCTAssertTrue(true)
+            case .error(_):
+                XCTFail()
+            }
+        }
+
+        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&id=3028486")
+        XCTAssertTrue(dataTask.resumeCall)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+
+    func testGetForecastForLatLonSuccess() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -164,7 +192,7 @@ class WeatherApiTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testGetForecastErrorWithEmptydData() {
+    func testGetForecastForLatLonErrorWithEmptydData() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -192,7 +220,7 @@ class WeatherApiTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testGetForecastErrorWithInvalidJSON() {
+    func testGetForecastForLatLonErrorWithInvalidJSON() {
         let mockSession = MockURLSession()
         let dataTask = Task()
         mockSession.nextDataTask = dataTask
@@ -217,6 +245,34 @@ class WeatherApiTests: XCTestCase {
         }
 
         XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544")
+        XCTAssertTrue(dataTask.resumeCall)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+
+    func testGetForecastForIdSuccess() {
+        let mockSession = MockURLSession()
+        let dataTask = Task()
+        mockSession.nextDataTask = dataTask
+
+        let path = Bundle(for: type(of: self)).path(forResource: "forecast", ofType: "json")
+        mockSession.nextData = try! String(contentsOfFile: path!).data(using: .utf8)
+
+        let weatherApi = WeatherApi(key: "keytest", urlSession: mockSession)
+
+        let expect = expectation(description: "Get completion")
+        weatherApi.getForecastFor(cityId: 43) { result in
+            expect.fulfill()
+
+            switch result {
+            case .success(let forecast):
+                XCTAssertEqual("Carvin", forecast.city.name)
+                XCTAssertTrue(true)
+            case .error(_):
+                XCTFail()
+            }
+        }
+
+        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&id=43")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
