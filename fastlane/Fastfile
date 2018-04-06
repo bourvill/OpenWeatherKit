@@ -9,10 +9,6 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-before_all do
-	swiftlint(mode: "autocorrect")
-end
-
 platform :ios do
   desc "Test ios"
   lane :test do
