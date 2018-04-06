@@ -1,4 +1,4 @@
-# OpenWeatherKit
+# OpenWeatherKit [![Build Status](https://www.bitrise.io/app/c0f61c2208d69ebf/status.svg?token=_M8JG4myn3kxurAo6KyrQQ&branch=master)](https://www.bitrise.io/app/c0f61c2208d69ebf)
 
 OpenWeatherKit is a library written in Swift.
 
