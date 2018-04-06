@@ -1,4 +1,9 @@
-# OpenWeatherKit [![Build Status](https://www.bitrise.io/app/c0f61c2208d69ebf/status.svg?token=_M8JG4myn3kxurAo6KyrQQ&branch=master)](https://www.bitrise.io/app/c0f61c2208d69ebf) [![Build Status](https://travis-ci.org/bourvill/OpenWeatherKit.svg?branch=master)](https://travis-ci.org/bourvill/OpenWeatherKit)
+# OpenWeatherKit 
+[![Build Status](https://www.bitrise.io/app/c0f61c2208d69ebf/status.svg?token=_M8JG4myn3kxurAo6KyrQQ&branch=master)](https://www.bitrise.io/app/c0f61c2208d69ebf) 
+[![Build Status](https://travis-ci.org/bourvill/OpenWeatherKit.svg?branch=master)](https://travis-ci.org/bourvill/OpenWeatherKit)
+[![Version](https://img.shields.io/cocoapods/v/OpenWeatherKit.svg?style=flat)](http://cocoapods.org/pods/OpenWeatherKit)
+[![License](https://img.shields.io/cocoapods/l/OpenWeatherKit.svg?style=flat)](http://cocoapods.org/pods/OpenWeatherKit)
+[![Platform](https://img.shields.io/cocoapods/p/OpenWeatherKit.svg?style=flat)](http://cocoapods.org/pods/OpenWeatherKit)
 
 OpenWeatherKit is a library written in Swift.
 
