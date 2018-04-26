@@ -1,0 +1,439 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Clouds.swift",
+      "line": 11,
+      "symbol": "Clouds",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Clouds.swift",
+      "line": 12,
+      "symbol": "Clouds.all",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Coord.swift",
+      "line": 11,
+      "symbol": "Coord",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Coord.swift",
+      "line": 12,
+      "symbol": "Coord.lon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Coord.swift",
+      "line": 13,
+      "symbol": "Coord.lat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 11,
+      "symbol": "Forecast",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 12,
+      "symbol": "Forecast.City",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 13,
+      "symbol": "Forecast.City.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 14,
+      "symbol": "Forecast.City.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 15,
+      "symbol": "Forecast.City.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 16,
+      "symbol": "Forecast.City.coord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 18,
+      "symbol": "Forecast.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 20,
+      "symbol": "Forecast.List",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 21,
+      "symbol": "Forecast.List.dt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 22,
+      "symbol": "Forecast.List.clouds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 23,
+      "symbol": "Forecast.List.main",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 24,
+      "symbol": "Forecast.List.weather",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 25,
+      "symbol": "Forecast.List.wind",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Forecast.swift",
+      "line": 27,
+      "symbol": "Forecast.list",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 11,
+      "symbol": "Main",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 12,
+      "symbol": "Main.temp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 13,
+      "symbol": "Main.pressure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 14,
+      "symbol": "Main.humidity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 15,
+      "symbol": "Main.tempMin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Main.swift",
+      "line": 16,
+      "symbol": "Main.tempMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 11,
+      "symbol": "Sys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 12,
+      "symbol": "Sys.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 13,
+      "symbol": "Sys.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 14,
+      "symbol": "Sys.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 15,
+      "symbol": "Sys.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 16,
+      "symbol": "Sys.sunrise",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Sys.swift",
+      "line": 17,
+      "symbol": "Sys.sunset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 11,
+      "symbol": "Weather",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 12,
+      "symbol": "Weather.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 13,
+      "symbol": "Weather.visibility",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 14,
+      "symbol": "Weather.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 15,
+      "symbol": "Weather.coord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 16,
+      "symbol": "Weather.wind",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 17,
+      "symbol": "Weather.base",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 18,
+      "symbol": "Weather.dt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 19,
+      "symbol": "Weather.weather",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 20,
+      "symbol": "Weather.sys",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 21,
+      "symbol": "Weather.clouds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Weather.swift",
+      "line": 22,
+      "symbol": "Weather.main",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/WeatherData.swift",
+      "line": 11,
+      "symbol": "WeatherData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/WeatherData.swift",
+      "line": 12,
+      "symbol": "WeatherData.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/WeatherData.swift",
+      "line": 13,
+      "symbol": "WeatherData.main",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/WeatherData.swift",
+      "line": 14,
+      "symbol": "WeatherData.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/WeatherData.swift",
+      "line": 15,
+      "symbol": "WeatherData.icon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Wind.swift",
+      "line": 11,
+      "symbol": "Wind",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Wind.swift",
+      "line": 12,
+      "symbol": "Wind.speed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Wind.swift",
+      "line": 13,
+      "symbol": "Wind.deg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/Model/Wind.swift",
+      "line": 15,
+      "symbol": "Wind.degString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/URLSessionProtocol.swift",
+      "line": 13,
+      "symbol": "URLSessionProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/URLSessionProtocol.swift",
+      "line": 14,
+      "symbol": "URLSessionProtocol.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/URLSessionProtocol.swift",
+      "line": 15,
+      "symbol": "URLSessionProtocol.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 45,
+      "symbol": "WeatherApiWeatherProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 46,
+      "symbol": "WeatherApiWeatherProtocol.getWeatherFor(lat:lon:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 47,
+      "symbol": "WeatherApiWeatherProtocol.getWeatherFor(cityId:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 50,
+      "symbol": "WeatherApiForecastProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 51,
+      "symbol": "WeatherApiForecastProtocol.getForecastFor(lat:lon:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maximemarinel/prive/OpenWeatherKit/Sources/WeatherApi.swift",
+      "line": 52,
+      "symbol": "WeatherApiForecastProtocol.getForecastFor(cityId:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/maximemarinel/prive/OpenWeatherKit"
+}
