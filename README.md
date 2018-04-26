@@ -47,8 +47,10 @@ $ pod install
 		[X] Latitude Longitude
 		[X] OpenWeatheMap City id
 
+### Documentation
+http://maxime.marinel.me/OpenWeatherKit/
 
-### Code Implementation
+### Code Example 
 First:
 ```swift
 import OpenWeatherKit
