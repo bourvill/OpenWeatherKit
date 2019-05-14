@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Wind: Codable {
-    public let speed: Double
+    public let speed: Double?
     public let deg: Double?
 
     public var degString: String {
