@@ -25,28 +25,28 @@ class WeatherTests: XCTestCase {
         XCTAssertEqual(1508842800, weather.dt)
 
         //Clouds
-        XCTAssertEqual(90, weather.clouds.all)
+        XCTAssertEqual(90, weather.clouds?.all)
         //sys
-        XCTAssertEqual(1, weather.sys.type)
-        XCTAssertEqual(5625, weather.sys.id)
-        XCTAssertEqual(0.0044, weather.sys.message)
-        XCTAssertEqual("FR", weather.sys.country)
-        XCTAssertEqual(1508826388, weather.sys.sunrise)
-        XCTAssertEqual(1508863034, weather.sys.sunset)
+        XCTAssertEqual(1, weather.sys?.type)
+        XCTAssertEqual(5625, weather.sys?.id)
+        XCTAssertEqual(0.0044, weather.sys?.message)
+        XCTAssertEqual("FR", weather.sys?.country)
+        XCTAssertEqual(1508826388, weather.sys?.sunrise)
+        XCTAssertEqual(1508863034, weather.sys?.sunset)
         //Coord
-        XCTAssertEqual(50.49, weather.coord.lat)
-        XCTAssertEqual(2.96, weather.coord.lon)
+        XCTAssertEqual(50.49, weather.coord?.lat)
+        XCTAssertEqual(2.96, weather.coord?.lon)
         //Wind
-        XCTAssertEqual(5.7, weather.wind.speed)
-        XCTAssertEqual(220, weather.wind.deg)
+        XCTAssertEqual(5.7, weather.wind?.speed)
+        XCTAssertEqual(220, weather.wind?.deg)
         //Main
-        XCTAssertEqual(289.61, weather.main.temp)
-        XCTAssertEqual(1021, weather.main.pressure)
-        XCTAssertEqual(88, weather.main.humidity)
-        XCTAssertEqual(288.15, weather.main.tempMin)
-        XCTAssertEqual(290.15, weather.main.tempMax)
+        XCTAssertEqual(289.61, weather.main?.temp)
+        XCTAssertEqual(1021, weather.main?.pressure)
+        XCTAssertEqual(88, weather.main?.humidity)
+        XCTAssertEqual(288.15, weather.main?.tempMin)
+        XCTAssertEqual(290.15, weather.main?.tempMax)
         //Weather
-        let weatherData = weather.weather.first!
+        let weatherData = weather.weather!.first!
         XCTAssertEqual(804, weatherData.id)
         XCTAssertEqual("Clouds", weatherData.main)
         XCTAssertEqual("overcast clouds", weatherData.description)

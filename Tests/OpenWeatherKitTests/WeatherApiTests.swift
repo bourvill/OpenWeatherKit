@@ -74,7 +74,10 @@ class WeatherApiTests: XCTestCase {
             }
         }
 
-        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lat=5.567788&lon=1.5544")
+        // Additional params are not guaranteed in order as they are passed in a dict
+        XCTAssert(
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lat=5.567788&lon=1.5544" ||
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lon=1.5544&lat=5.567788")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
@@ -131,7 +134,10 @@ class WeatherApiTests: XCTestCase {
             }
         }
 
-        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lat=5.567788&lon=1.5544")
+        // Additional params are not guaranteed in order as they are passed in a dict
+        XCTAssert(
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lat=5.567788&lon=1.5544" ||
+                mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/weather?APPID=keytest&lon=1.5544&lat=5.567788")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
@@ -187,7 +193,10 @@ class WeatherApiTests: XCTestCase {
             }
         }
 
-        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544")
+        // Additional params are not guaranteed in order as they are passed in a dict
+        XCTAssert(
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544" ||
+                mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lon=1.5544&lat=5.567788")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
@@ -215,7 +224,10 @@ class WeatherApiTests: XCTestCase {
             }
         }
 
-        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544")
+        // Additional params are not guaranteed in order as they are passed in a dict
+        XCTAssert(
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544" ||
+                mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lon=1.5544&lat=5.567788")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
@@ -244,7 +256,10 @@ class WeatherApiTests: XCTestCase {
             }
         }
 
-        XCTAssertEqual(mockSession.lastURL?.absoluteString, "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544")
+        // Additional params are not guaranteed in order as they are passed in a dict
+        XCTAssert(
+            mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lat=5.567788&lon=1.5544" ||
+                mockSession.lastURL?.absoluteString == "https://api.openweathermap.org/data/2.5/forecast?APPID=keytest&lon=1.5544&lat=5.567788")
         XCTAssertTrue(dataTask.resumeCall)
         waitForExpectations(timeout: 5, handler: nil)
     }
