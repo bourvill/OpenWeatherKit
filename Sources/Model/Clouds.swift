@@ -9,5 +9,5 @@
 import Foundation
 
 public struct Clouds: Codable {
-    public let all: Int
+    public let all: Int?
 }
