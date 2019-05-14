@@ -12,7 +12,7 @@ import XCTest
 
 class WeatherTests: XCTestCase {
     func testDecode() {
-              let path = Bundle(for: type(of: self)).path(forResource: "weather", ofType: "json")
+        let path = Bundle(for: type(of: self)).path(forResource: "weather", ofType: "json")
         let data = try! String(contentsOfFile: path!).data(using: .utf8)!
         let decoder = JSONDecoder()
 
