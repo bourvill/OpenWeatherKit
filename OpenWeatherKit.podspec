@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OpenWeatherKit"
-  s.version      = "2.1.0"
+  s.version      = "2.2.0"
   s.summary      = "Use easly OpenWeatherMap with simple api"
   s.description  = <<-DESC
     OpenWeatherKit is a simple library for OpenWeatherMap API
